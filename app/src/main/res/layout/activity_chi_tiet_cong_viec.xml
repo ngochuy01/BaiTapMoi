@@ -25,6 +25,14 @@
         android:id="@+id/tvChiTietMoTa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:paddingBottom="16dp"/>
+
+    <!-- Thêm nút chỉnh sửa này vào để khớp với file Kotlin -->
+    <Button
+        android:id="@+id/btnChinhSua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chinh sua cong viec"/>
 
 </LinearLayout>
