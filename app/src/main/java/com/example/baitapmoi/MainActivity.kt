@@ -1,7 +1,10 @@
 package com.example.baitapmoi
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,10 +29,17 @@ class MainActivity : AppCompatActivity() {
             val tenCV = edtTenCongViec.text.toString()
             val moTa = edtMoTa.text.toString()
             Toast.makeText(this, "Da nhap: $tenCV", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, ChiTietCongViecActivity::class.java).apply {
+                putExtra("TEN_CONG_VIEC", tenCV)
+                putExtra("MO_TA", moTa)
+            }
+            startActivity(intent)
         }
 
         btnXemDanhSach.setOnClickListener {
             Toast.makeText(this, "Chuc nang xem danh sach dang phat trien", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
