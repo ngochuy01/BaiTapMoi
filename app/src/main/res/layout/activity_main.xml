@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Thông tin sinh viên -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvThongTinSV"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Ho ten: Huynh Ngoc Huy\nMSSV: 2415141122108\nLop HP: CNTT"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Ô nhập tên công việc -->
+    <EditText
+        android:id="@+id/edtTenCongViec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ten cong viec"/>
+
+    <!-- Ô nhập mô tả công việc -->
+    <EditText
+        android:id="@+id/edtMoTa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap mo ta cong viec"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Nút Tạo công việc -->
+    <Button
+        android:id="@+id/btnTaoCongViec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tao cong viec"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Nút Xem danh sách công việc -->
+    <Button
+        android:id="@+id/btnXemDanhSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem danh sach cong viec"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
