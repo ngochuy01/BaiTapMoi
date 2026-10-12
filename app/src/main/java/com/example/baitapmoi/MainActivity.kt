@@ -26,13 +26,17 @@ class MainActivity : AppCompatActivity() {
         btnXemDanhSach = findViewById(R.id.btnXemDanhSach)
 
         btnTaoCongViec.setOnClickListener {
-            val tenCV = edtTenCongViec.text.toString()
-            val moTa = edtMoTa.text.toString()
-            Toast.makeText(this, "Da nhap: $tenCV", Toast.LENGTH_SHORT).show()
+            val tenCV = edtTenCongViec.text.toString().trim()
+            val moTa = edtMoTa.text.toString().trim()
 
+            if (tenCV.isEmpty()) {
+                edtTenCongViec.error = "Ten cong viec khong duoc de trong!"
+                return@setOnClickListener
+            }
+
+            val congViec = CongViec(tenCV, moTa, false)
             val intent = Intent(this, ChiTietCongViecActivity::class.java).apply {
-                putExtra("TEN_CONG_VIEC", tenCV)
-                putExtra("MO_TA", moTa)
+                putExtra("OBJECT_CV", congViec)
             }
             startActivity(intent)
         }
