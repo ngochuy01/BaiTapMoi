@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtSuaTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sua ten cong viec"/>
+
+    <EditText
+        android:id="@+id/edtSuaMoTa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sua mo ta cong viec"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnLuu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Luu"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
